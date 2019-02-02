@@ -21,7 +21,13 @@ export default class RealEstateList extends Component<MyProps> {
     return (
       <ScrollView style={{ backgroundColor: "#FFFFFF", flex: 1 }}>
         <FlatList
-          data={this.props.estates}
+          data={this.props.estates.filter((estate: Estate) => {
+            if (estate.hidden) {
+              return false;
+            }
+
+            return true;
+          })}
           keyExtractor={item => item.id.toString()}
           renderItem={({ item }: { item: Estate }) => (
             <ListItem

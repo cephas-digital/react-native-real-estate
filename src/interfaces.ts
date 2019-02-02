@@ -1,6 +1,7 @@
 export enum OnSale {
   No = 0,
-  Yes = 1
+  Yes = 1,
+  All = 2
 }
 
 export interface City {
@@ -29,4 +30,11 @@ export interface Estate {
   updated_at: string;
   city: City;
   developer: Developer;
+  hidden?: boolean;
+}
+
+export interface ListingFilters {
+  country?: string | null;
+  onSale?: OnSale | null;
+  maxPrice?: number | null;
 }
