@@ -1,0 +1,461 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<RCTScrollView
+  style={
+    Object {
+      "backgroundColor": "#FFFFFF",
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <RCTScrollView
+      data={
+        Array [
+          Object {
+            "city": Object {
+              "country": "Tajikistan",
+              "created_at": "2019-01-31 13:28:45",
+              "id": 51,
+              "name": "Maggio Crossroad",
+              "updated_at": "2019-01-31 13:28:45",
+            },
+            "city_id": 51,
+            "created_at": "2019-02-01 20:35:49",
+            "developer": Object {
+              "created_at": "2019-01-31 13:28:45",
+              "id": 31,
+              "name": "Dr. Lucas Krajcik III",
+              "updated_at": "2019-01-31 13:28:45",
+            },
+            "developer_id": 31,
+            "id": 351,
+            "isOnSale": 1,
+            "name": "Some apartment",
+            "price": 4000,
+            "updated_at": "2019-02-01 20:35:49",
+          },
+          Object {
+            "city": Object {
+              "country": "Monaco",
+              "created_at": "2019-01-31 13:28:45",
+              "id": 61,
+              "name": "Mary Field",
+              "updated_at": "2019-01-31 13:28:45",
+            },
+            "city_id": 61,
+            "created_at": "2019-02-01 20:38:05",
+            "developer": Object {
+              "created_at": "2019-01-31 13:28:45",
+              "id": 61,
+              "name": "Lucious Sipes",
+              "updated_at": "2019-01-31 13:28:45",
+            },
+            "developer_id": 61,
+            "id": 361,
+            "isOnSale": 1,
+            "name": "Some apartment",
+            "price": 4000,
+            "updated_at": "2019-02-01 20:38:05",
+          },
+        ]
+      }
+      disableVirtualization={false}
+      getItem={[Function]}
+      getItemCount={[Function]}
+      horizontal={false}
+      initialNumToRender={10}
+      keyExtractor={[Function]}
+      maxToRenderPerBatch={10}
+      numColumns={1}
+      onContentSizeChange={[Function]}
+      onEndReachedThreshold={2}
+      onLayout={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      renderItem={[Function]}
+      scrollEventThrottle={50}
+      stickyHeaderIndices={Array []}
+      updateCellsBatchingPeriod={50}
+      viewabilityConfigCallbackPairs={Array []}
+      windowSize={21}
+    >
+      <View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View>
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "white",
+                  "borderColor": "#bcbbc1",
+                  "flexDirection": "row",
+                  "padding": 14,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "flex": 1,
+                    "justifyContent": "center",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "marginRight": 10,
+                      }
+                    }
+                  >
+                    Some apartment
+                  </Text>
+                  <View
+                    style={Object {}}
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "alignSelf": "center",
+                          "backgroundColor": "#52c41a",
+                          "borderColor": "#fff",
+                          "borderRadius": 9,
+                          "borderWidth": 0.5,
+                          "height": 18,
+                          "justifyContent": "center",
+                          "minWidth": 18,
+                          "padding": 5,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "white",
+                            "fontSize": 12,
+                            "paddingHorizontal": 4,
+                          }
+                        }
+                      >
+                        $4000
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+                <Text
+                  style={
+                    Object {
+                      "backgroundColor": "transparent",
+                      "fontSize": 15,
+                    }
+                  }
+                  theme={
+                    Object {
+                      "colors": Object {
+                        "disabled": "hsl(208, 8%, 90%)",
+                        "divider": "#bcbbc1",
+                        "error": "#ff190c",
+                        "grey0": "#393e42",
+                        "grey1": "#43484d",
+                        "grey2": "#5e6977",
+                        "grey3": "#86939e",
+                        "grey4": "#bdc6cf",
+                        "grey5": "#e1e8ee",
+                        "greyOutline": "#bbb",
+                        "platform": Object {
+                          "android": Object {
+                            "error": "#f44336",
+                            "primary": "#2196f3",
+                            "secondary": "#9C27B0",
+                            "success": "#4caf50",
+                            "warning": "#ffeb3b",
+                          },
+                          "ios": Object {
+                            "error": "#ff3b30",
+                            "primary": "#007aff",
+                            "secondary": "#5856d6",
+                            "success": "#4cd964",
+                            "warning": "#ffcc00",
+                          },
+                        },
+                        "primary": "#2089dc",
+                        "searchBg": "#303337",
+                        "secondary": "#8F0CE8",
+                        "success": "#52c41a",
+                        "warning": "#faad14",
+                      },
+                    }
+                  }
+                >
+                  Country: Tajikistan, Developer: Dr. Lucas Krajcik III
+                </Text>
+              </View>
+              <View
+                width={16}
+              />
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "flex": 0.5,
+                    "justifyContent": "center",
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "backgroundColor": "transparent",
+                      "color": "rgba(0, 0, 0, 0.54)",
+                      "fontSize": 17,
+                    }
+                  }
+                  theme={
+                    Object {
+                      "colors": Object {
+                        "disabled": "hsl(208, 8%, 90%)",
+                        "divider": "#bcbbc1",
+                        "error": "#ff190c",
+                        "grey0": "#393e42",
+                        "grey1": "#43484d",
+                        "grey2": "#5e6977",
+                        "grey3": "#86939e",
+                        "grey4": "#bdc6cf",
+                        "grey5": "#e1e8ee",
+                        "greyOutline": "#bbb",
+                        "platform": Object {
+                          "android": Object {
+                            "error": "#f44336",
+                            "primary": "#2196f3",
+                            "secondary": "#9C27B0",
+                            "success": "#4caf50",
+                            "warning": "#ffeb3b",
+                          },
+                          "ios": Object {
+                            "error": "#ff3b30",
+                            "primary": "#007aff",
+                            "secondary": "#5856d6",
+                            "success": "#4cd964",
+                            "warning": "#ffcc00",
+                          },
+                        },
+                        "primary": "#2089dc",
+                        "searchBg": "#303337",
+                        "secondary": "#8F0CE8",
+                        "success": "#52c41a",
+                        "warning": "#faad14",
+                      },
+                    }
+                  }
+                >
+                  On Sale
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View>
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "white",
+                  "borderColor": "#bcbbc1",
+                  "flexDirection": "row",
+                  "padding": 14,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "flex": 1,
+                    "justifyContent": "center",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "marginRight": 10,
+                      }
+                    }
+                  >
+                    Some apartment
+                  </Text>
+                  <View
+                    style={Object {}}
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "alignSelf": "center",
+                          "backgroundColor": "#52c41a",
+                          "borderColor": "#fff",
+                          "borderRadius": 9,
+                          "borderWidth": 0.5,
+                          "height": 18,
+                          "justifyContent": "center",
+                          "minWidth": 18,
+                          "padding": 5,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "white",
+                            "fontSize": 12,
+                            "paddingHorizontal": 4,
+                          }
+                        }
+                      >
+                        $4000
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+                <Text
+                  style={
+                    Object {
+                      "backgroundColor": "transparent",
+                      "fontSize": 15,
+                    }
+                  }
+                  theme={
+                    Object {
+                      "colors": Object {
+                        "disabled": "hsl(208, 8%, 90%)",
+                        "divider": "#bcbbc1",
+                        "error": "#ff190c",
+                        "grey0": "#393e42",
+                        "grey1": "#43484d",
+                        "grey2": "#5e6977",
+                        "grey3": "#86939e",
+                        "grey4": "#bdc6cf",
+                        "grey5": "#e1e8ee",
+                        "greyOutline": "#bbb",
+                        "platform": Object {
+                          "android": Object {
+                            "error": "#f44336",
+                            "primary": "#2196f3",
+                            "secondary": "#9C27B0",
+                            "success": "#4caf50",
+                            "warning": "#ffeb3b",
+                          },
+                          "ios": Object {
+                            "error": "#ff3b30",
+                            "primary": "#007aff",
+                            "secondary": "#5856d6",
+                            "success": "#4cd964",
+                            "warning": "#ffcc00",
+                          },
+                        },
+                        "primary": "#2089dc",
+                        "searchBg": "#303337",
+                        "secondary": "#8F0CE8",
+                        "success": "#52c41a",
+                        "warning": "#faad14",
+                      },
+                    }
+                  }
+                >
+                  Country: Monaco, Developer: Lucious Sipes
+                </Text>
+              </View>
+              <View
+                width={16}
+              />
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "flex": 0.5,
+                    "justifyContent": "center",
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "backgroundColor": "transparent",
+                      "color": "rgba(0, 0, 0, 0.54)",
+                      "fontSize": 17,
+                    }
+                  }
+                  theme={
+                    Object {
+                      "colors": Object {
+                        "disabled": "hsl(208, 8%, 90%)",
+                        "divider": "#bcbbc1",
+                        "error": "#ff190c",
+                        "grey0": "#393e42",
+                        "grey1": "#43484d",
+                        "grey2": "#5e6977",
+                        "grey3": "#86939e",
+                        "grey4": "#bdc6cf",
+                        "grey5": "#e1e8ee",
+                        "greyOutline": "#bbb",
+                        "platform": Object {
+                          "android": Object {
+                            "error": "#f44336",
+                            "primary": "#2196f3",
+                            "secondary": "#9C27B0",
+                            "success": "#4caf50",
+                            "warning": "#ffeb3b",
+                          },
+                          "ios": Object {
+                            "error": "#ff3b30",
+                            "primary": "#007aff",
+                            "secondary": "#5856d6",
+                            "success": "#4cd964",
+                            "warning": "#ffcc00",
+                          },
+                        },
+                        "primary": "#2089dc",
+                        "searchBg": "#303337",
+                        "secondary": "#8F0CE8",
+                        "success": "#52c41a",
+                        "warning": "#faad14",
+                      },
+                    }
+                  }
+                >
+                  On Sale
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>
+</RCTScrollView>
+`;
