@@ -36,7 +36,12 @@ export default class EstatesFilter extends PureComponent<MyProps> {
               this.props.setFilters(filters)
             }
           />
-          <PriceSelector />
+          <PriceSelector
+            filters={this.props.filters}
+            setFilters={(filters: ListingFilters) =>
+              this.props.setFilters(filters)
+            }
+          />
         </View>
         <View style={{ alignItems: "center" }}>
           <Button

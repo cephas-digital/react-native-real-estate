@@ -40,6 +40,20 @@ export const filterEstatesBy = (
 
         return estate;
       }
+    )
+    .filter((estate: Estate): boolean => !estate.hidden)
+    .map(
+      (estate: Estate): Estate => {
+        if (
+          filters.maxPrice !== null &&
+          typeof filters.maxPrice !== "undefined" &&
+          estate.price > filters.maxPrice
+        ) {
+          estate.hidden = true;
+        }
+
+        return estate;
+      }
     );
 
   return estates;
