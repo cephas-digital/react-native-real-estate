@@ -666,6 +666,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-native-collapsible@^0.11.0":
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/@types/react-native-collapsible/-/react-native-collapsible-0.11.0.tgz#2f8c42843d1602709ad8c9cd6180bc690dbd0879"
+  integrity sha512-UL4MgDKjevhbGL13t4G7WAxFzlPPzbB5LuHyinEwrXuROt3EujoEc8M6RD244nNEREYDqGVhvCVicx86wCRW/w==
+  dependencies:
+    react-native-collapsible "*"
+
 "@types/react-native@*", "@types/react-native@^0.57.32":
   version "0.57.32"
   resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.57.32.tgz#5c4d43fe50f4bae81390e835209d501270b9704a"
@@ -5594,6 +5601,13 @@ react-native-btr@^1.1.2:
   dependencies:
     react-native-modal "^7.0.1"
     react-native-vector-icons "^6.1.0"
+
+react-native-collapsible@*, react-native-collapsible@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/react-native-collapsible/-/react-native-collapsible-1.4.0.tgz#ec03cac361178319b77bb9993b73677356dd89d2"
+  integrity sha512-lf2U3gRHTNakqtN04NLJkmF02XaOF/DPOTGlwK8yrn85wMAdRaPpD0fnb7RvH4OID3SmxXBTWzZqkBTmasJyIQ==
+  dependencies:
+    prop-types "^15.6.2"
 
 react-native-elements@^1.0.0:
   version "1.0.0"
