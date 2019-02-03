@@ -1,7 +1,11 @@
 import React from "react";
 import { SafeAreaView, StatusBar, Text } from "react-native";
 import { Estate } from "../interfaces";
-import { NavigationScreenProp, NavigationParams } from "react-navigation";
+import {
+  NavigationScreenProp,
+  NavigationParams,
+  NavigationScreenDetails
+} from "react-navigation";
 
 interface MyProps {
   navigation: NavigationScreenProp<any, NavigationParams>;
@@ -10,7 +14,9 @@ interface MyProps {
 export default class RealEstateSingleViewContainer extends React.Component<
   MyProps
 > {
-  static navigationOptions = (navigationOptions: any) => {
+  static navigationOptions = (
+    navigationOptions: NavigationScreenDetails<any>
+  ) => {
     return {
       title: navigationOptions.navigation.getParam("estate").name
     };

@@ -21,10 +21,10 @@ export default class PriceSelector extends PureComponent<MyProps> {
   render() {
     return (
       <Input
-        containerStyle={{ width: 160 }}
+        containerStyle={{ paddingHorizontal: 4 }}
+        inputStyle={{ fontSize: 16 }}
         value={this.getPriceAsString()}
         placeholder="Max Price"
-        leftIcon={{ name: "dollar", type: "font-awesome" }}
         leftIconContainerStyle={{ marginRight: 10 }}
         onChangeText={(maxPrice: string) => {
           if (isNaN(parseInt(maxPrice, 10))) {

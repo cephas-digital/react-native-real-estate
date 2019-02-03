@@ -6,12 +6,12 @@ The requirement for the app:
 
     + display a list of all real estate entries (4 points)
     + add support for filtering the real estate entries (4 points)
-    - display details page of one specific real estate entry (4 points)
-    - add support for adding a new real estate entry (4 points)
+    + display details page of one specific real estate entry (4 points)
+    + add support for adding a new real estate entry (4 points)
 
-    - bonus 1: collapsable filter panel (2 points)
+    + bonus 1: collapsable filter panel (2 points)
     + bonus 2: improve overall styling of the app from the video (2 points)
-    - bonus 3: add validation to the form of adding items (2 points)
+    + bonus 3: add validation to the form of adding items (2 points)
 
 You can get 22 points in total including the bonus points.
 

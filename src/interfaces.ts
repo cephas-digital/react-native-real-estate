@@ -37,4 +37,5 @@ export interface ListingFilters {
   country?: string | null;
   onSale?: OnSale | null;
   maxPrice?: number | null;
+  developerId?: number | null;
 }

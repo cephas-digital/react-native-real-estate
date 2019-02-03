@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 //@ts-ignore
-import { RadioGroup, RadioButton } from "react-native-btr";
+import { RadioButton } from "react-native-btr";
 import { View, Text } from "react-native";
 import { ListingFilters } from "../interfaces";
 
@@ -12,6 +12,44 @@ interface MyProps {
 export default class OnSaleSelector extends Component<MyProps> {
   onButtonPress(onSaleValue: number) {
     this.props.setFilters({ onSale: onSaleValue });
+  }
+
+  generateButtons(): Array<Element> {
+    const buttons: Array<Element> = [];
+    [
+      {
+        text: "All",
+        value: 2,
+        checked: (props: any) =>
+          props.filters.onSale === 2 ||
+          props.filters.onSale === null ||
+          typeof props.filters.onSale === "undefined"
+      },
+      {
+        text: "Yes",
+        value: 1,
+        checked: (props: any) => props.filters.onSale === 1
+      },
+      {
+        text: "No",
+        value: 0,
+        checked: (props: any) => props.filters.onSale === 0
+      }
+    ].forEach((button, index) => {
+      buttons.push(
+        <RadioButton
+          key={index}
+          checked={button.checked(this.props)}
+          color={"#484"}
+          onPress={() => this.onButtonPress(button.value)}
+          size={10}
+        >
+          <Text style={[{ margin: 10, color: "#484" }]}>{button.text}</Text>
+        </RadioButton>
+      );
+    });
+
+    return buttons;
   }
 
   render() {
@@ -31,36 +69,7 @@ export default class OnSaleSelector extends Component<MyProps> {
         >
           Is on Sale?
         </Text>
-        <View>
-          <RadioButton
-            checked={
-              this.props.filters.onSale === 2 ||
-              this.props.filters.onSale === null ||
-              typeof this.props.filters.onSale === "undefined"
-            }
-            color={"#484"}
-            onPress={() => this.onButtonPress(2)}
-            size={10}
-          >
-            <Text style={[{ margin: 10, color: "#484" }]}>All</Text>
-          </RadioButton>
-          <RadioButton
-            checked={this.props.filters.onSale === 1}
-            color={"#484"}
-            onPress={() => this.onButtonPress(1)}
-            size={10}
-          >
-            <Text style={[{ margin: 10, color: "#484" }]}>Yes</Text>
-          </RadioButton>
-          <RadioButton
-            checked={this.props.filters.onSale === 0}
-            color={"#484"}
-            onPress={() => this.onButtonPress(0)}
-            size={10}
-          >
-            <Text style={[{ margin: 10, color: "#484" }]}>No</Text>
-          </RadioButton>
-        </View>
+        <View>{this.generateButtons()}</View>
       </View>
     );
   }

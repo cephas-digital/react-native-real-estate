@@ -8,7 +8,7 @@ import { Button, Icon } from "react-native-elements";
 import Collapsible from "react-native-collapsible";
 
 interface MyProps {
-  countries: Array<string>;
+  countries: Array<{ name: string; city_id: number }>;
   filters: ListingFilters;
   setFilters(filters: ListingFilters): void;
 }
@@ -101,12 +101,14 @@ export default class EstatesFilter extends PureComponent<MyProps> {
                   this.props.setFilters(filters)
                 }
               />
-              <PriceSelector
-                filters={this.props.filters}
-                setFilters={(filters: ListingFilters) =>
-                  this.props.setFilters(filters)
-                }
-              />
+              <View style={{ width: 160 }}>
+                <PriceSelector
+                  filters={this.props.filters}
+                  setFilters={(filters: ListingFilters) =>
+                    this.props.setFilters(filters)
+                  }
+                />
+              </View>
             </View>
             <View
               style={{
