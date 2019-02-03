@@ -11,14 +11,6 @@ interface MyProps {
 }
 
 export default class CountrySelector extends PureComponent<MyProps> {
-  inputRefsPicker: Picker | null;
-
-  constructor(props: any) {
-    super(props);
-
-    this.inputRefsPicker = null;
-  }
-
   render() {
     return (
       <View>
@@ -35,16 +27,7 @@ export default class CountrySelector extends PureComponent<MyProps> {
             this.setState({ selectedCountry });
             this.props.setFilters({ country: selectedCountry });
           }}
-          onUpArrow={() => {
-            this.inputRefsPicker && this.inputRefsPicker.focus();
-          }}
-          onDownArrow={() => {
-            this.inputRefsPicker && this.inputRefsPicker.togglePicker();
-          }}
           value={this.props.filters.country}
-          ref={el => {
-            this.inputRefsPicker = el;
-          }}
         />
       </View>
     );

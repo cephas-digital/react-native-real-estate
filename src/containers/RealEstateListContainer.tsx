@@ -60,6 +60,9 @@ export default class RealEstateListContainer extends React.Component<
           setFilters={(filters: ListingFilters) => this.setFilters(filters)}
         />
         <RealEstateList
+          onSingleItemPress={(estate: Estate) =>
+            this.props.navigation.navigate("RealEstateSingleView", { estate })
+          }
           estates={filterEstatesBy(this.state.estates, this.state.filters)}
         />
       </SafeAreaView>
