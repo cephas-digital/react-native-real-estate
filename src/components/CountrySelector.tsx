@@ -6,6 +6,7 @@ import { ListingFilters } from "../interfaces";
 
 interface MyProps {
   countries: Array<string>;
+  filters: ListingFilters;
   setFilters(filters: ListingFilters): void;
 }
 
@@ -17,10 +18,6 @@ export default class CountrySelector extends PureComponent<MyProps> {
 
     this.inputRefsPicker = null;
   }
-
-  state = {
-    selectedCountry: null
-  };
 
   render() {
     return (
@@ -44,7 +41,7 @@ export default class CountrySelector extends PureComponent<MyProps> {
           onDownArrow={() => {
             this.inputRefsPicker && this.inputRefsPicker.togglePicker();
           }}
-          value={this.state.selectedCountry}
+          value={this.props.filters.country}
           ref={el => {
             this.inputRefsPicker = el;
           }}

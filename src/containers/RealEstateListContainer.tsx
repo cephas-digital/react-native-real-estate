@@ -1,8 +1,9 @@
 import React from "react";
 import { SafeAreaView, StatusBar } from "react-native";
 import RealEstateList from "../components/RealEstateList";
-import { Estate, OnSale, ListingFilters } from "../interfaces";
-import CountrySelector from "../components/CountrySelector";
+import EstatesFilter from "../components/EstatesFilter";
+import { Estate, ListingFilters } from "../interfaces";
+import { filterEstatesBy } from "../service/EstatesFiltering";
 var RealEstateApi = require("./../service/realestate");
 
 interface MyState {
@@ -38,33 +39,9 @@ export default class RealEstateListContainer extends React.Component<
   };
 
   setFilters = (filters: ListingFilters) => {
-    const newFilters = { ...this.state.filters, ...filters };
-
     this.setState({
-      filters: newFilters,
-      estates: this.filterEstatesBy(filters)
+      filters: { ...this.state.filters, ...filters }
     });
-  };
-
-  filterEstatesBy = (filters: ListingFilters): Array<Estate> => {
-    let estates = this.state.estates;
-    estates = estates.map(
-      (estate: Estate): Estate => {
-        estate.hidden = true;
-
-        if (
-          estate.city.country === filters.country ||
-          filters.country === null ||
-          typeof filters.country === "undefined"
-        ) {
-          estate.hidden = false;
-        }
-
-        return estate;
-      }
-    );
-
-    return estates;
   };
 
   render() {
@@ -77,11 +54,14 @@ export default class RealEstateListContainer extends React.Component<
           marginHorizontal: 10
         }}
       >
-        <CountrySelector
+        <EstatesFilter
           countries={this.state.countries}
+          filters={this.state.filters}
           setFilters={(filters: ListingFilters) => this.setFilters(filters)}
         />
-        <RealEstateList estates={this.state.estates} />
+        <RealEstateList
+          estates={filterEstatesBy(this.state.estates, this.state.filters)}
+        />
       </SafeAreaView>
     );
   }
