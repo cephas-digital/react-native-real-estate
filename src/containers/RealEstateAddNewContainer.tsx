@@ -6,6 +6,7 @@ import CountrySelector from "../components/CountrySelector";
 import { City, ListingFilters, Developer } from "../interfaces";
 import DeveloperSelector from "../components/DeveloperSelector";
 import PriceSelector from "../components/PriceSelector";
+import { EstatesContext } from "../context/EstatesContext";
 import { showMessage } from "react-native-flash-message";
 var RealEstateApi = require("./../service/realestate");
 
@@ -230,48 +231,53 @@ export default class RealEstateAddNewContainer extends React.Component<
             title={"Cancel"}
             type={"solid"}
           />
-          <Button
-            containerStyle={{ width: "35%", marginHorizontal: 10 }}
-            onPress={() => {
-              if (this.validateNewEstate()) {
-                return;
-              }
+          <EstatesContext.Consumer>
+            {data => (
+              <Button
+                containerStyle={{ width: "35%", marginHorizontal: 10 }}
+                onPress={() => {
+                  if (this.validateNewEstate()) {
+                    return;
+                  }
 
-              RealEstateApi.addListItem({
-                cityId: this.state.newEstate.city_id,
-                developerId: this.state.newEstate.developer_id,
-                name: this.state.newEstate.name,
-                onSale: 1,
-                lessThen: this.state.newEstate.price
-              })
-                .then(() => {
-                  this.setState({
-                    newEstate: {
-                      name: null,
-                      price: null,
-                      city_id: null,
-                      developer_id: null
-                    },
-                    filters: {
-                      country: null,
-                      developerId: null
-                    }
-                  });
-                  showMessage({
-                    message: "Offer was added successfuly",
-                    type: "success"
-                  });
-                })
-                .catch(() =>
-                  showMessage({
-                    message: "There was an server error",
-                    type: "danger"
+                  RealEstateApi.addListItem({
+                    cityId: this.state.newEstate.city_id,
+                    developerId: this.state.newEstate.developer_id,
+                    name: this.state.newEstate.name,
+                    onSale: 1,
+                    lessThen: this.state.newEstate.price
                   })
-                );
-            }}
-            title={"Add new"}
-            type={"solid"}
-          />
+                    .then(() => {
+                      data.fetchEstates();
+                      this.setState({
+                        newEstate: {
+                          name: null,
+                          price: null,
+                          city_id: null,
+                          developer_id: null
+                        },
+                        filters: {
+                          country: null,
+                          developerId: null
+                        }
+                      });
+                      showMessage({
+                        message: "Offer was added successfuly",
+                        type: "success"
+                      });
+                    })
+                    .catch(() =>
+                      showMessage({
+                        message: "There was an server error",
+                        type: "danger"
+                      })
+                    );
+                }}
+                title={"Add new"}
+                type={"solid"}
+              />
+            )}
+          </EstatesContext.Consumer>
         </View>
       </SafeAreaView>
     );

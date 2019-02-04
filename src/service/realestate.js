@@ -24,7 +24,6 @@ module.exports = class RealEstateApi {
   }
 
   static filterByType(data) {
-    console.log(url("estate/filter?" + buildParamsQuery(data)));
     return fetch(url("estate/filter?" + buildParamsQuery(data))).then(res =>
       res.json()
     );
