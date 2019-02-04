@@ -72,3 +72,7 @@ yarn start
 
 If you want to test with development backend version then change the URL path
 in file `service/realestate.js` (ENV variables not working with expo app)
+
+### Tests
+
+Run Jest components/services tests with `yarn test` command.

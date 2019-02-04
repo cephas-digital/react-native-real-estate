@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`no errors 1`] = `null`;
+
+exports[`renders correctly 1`] = `
+Array [
+  <View
+    style={
+      Object {
+        "backgroundColor": "#ff5722",
+        "borderColor": "#ff5722",
+        "borderRadius": 4,
+        "borderWidth": 1,
+        "marginVertical": 4,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#fff",
+          "padding": 4,
+        }
+      }
+    >
+      Selected country is invalid!
+    </Text>
+  </View>,
+  <View
+    style={
+      Object {
+        "backgroundColor": "#ff5722",
+        "borderColor": "#ff5722",
+        "borderRadius": 4,
+        "borderWidth": 1,
+        "marginVertical": 4,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#fff",
+          "padding": 4,
+        }
+      }
+    >
+      Selected developer is invalid!
+    </Text>
+  </View>,
+  <View
+    style={
+      Object {
+        "backgroundColor": "#ff5722",
+        "borderColor": "#ff5722",
+        "borderRadius": 4,
+        "borderWidth": 1,
+        "marginVertical": 4,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#fff",
+          "padding": 4,
+        }
+      }
+    >
+      Provided price is invalid!
+    </Text>
+  </View>,
+  <View
+    style={
+      Object {
+        "backgroundColor": "#ff5722",
+        "borderColor": "#ff5722",
+        "borderRadius": 4,
+        "borderWidth": 1,
+        "marginVertical": 4,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#fff",
+          "padding": 4,
+        }
+      }
+    >
+      Provided name is invalid!
+    </Text>
+  </View>,
+]
+`;
+
+exports[`renders price error 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#ff5722",
+      "borderColor": "#ff5722",
+      "borderRadius": 4,
+      "borderWidth": 1,
+      "marginVertical": 4,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#fff",
+        "padding": 4,
+      }
+    }
+  >
+    Provided price is invalid!
+  </Text>
+</View>
+`;
+
+exports[`renders single error 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#ff5722",
+      "borderColor": "#ff5722",
+      "borderRadius": 4,
+      "borderWidth": 1,
+      "marginVertical": 4,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#fff",
+        "padding": 4,
+      }
+    }
+  >
+    Selected developer is invalid!
+  </Text>
+</View>
+`;

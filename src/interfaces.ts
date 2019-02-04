@@ -39,3 +39,10 @@ export interface ListingFilters {
   maxPrice?: number | null;
   developerId?: number | null;
 }
+
+export interface NewEstate {
+  name: string | null;
+  price: number | null | undefined;
+  city_id: number | null;
+  developer_id: number | null | undefined;
+}

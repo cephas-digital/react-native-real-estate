@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "paddingHorizontal": 4,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "borderBottomWidth": 1,
+        "borderColor": "#86939e",
+        "flexDirection": "row",
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      keyboardType="number-pad"
+      onChangeText={[Function]}
+      placeholder="Max Price"
+      style={
+        Object {
+          "alignSelf": "center",
+          "color": "black",
+          "flex": 1,
+          "fontSize": 16,
+          "minHeight": 40,
+        }
+      }
+      testID="RNE__Input__text-input"
+      underlineColorAndroid="transparent"
+      value=""
+    />
+  </View>
+</View>
+`;

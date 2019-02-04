@@ -1,0 +1,179 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "marginVertical": 10,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "fontSize": 20,
+        "justifyContent": "center",
+        "marginBottom": 10,
+      }
+    }
+  >
+    Is on Sale?
+  </Text>
+  <View>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "borderColor": "#484",
+            "borderRadius": 20,
+            "borderWidth": 2,
+            "opacity": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#484",
+              "borderRadius": 10,
+              "margin": 2,
+              "padding": 10,
+            }
+          }
+        />
+      </View>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#484",
+              "margin": 10,
+            },
+          ]
+        }
+      >
+        All
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "borderColor": "#484",
+            "borderRadius": 20,
+            "borderWidth": 2,
+            "opacity": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#0000",
+              "borderRadius": 10,
+              "margin": 2,
+              "padding": 10,
+            }
+          }
+        />
+      </View>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#484",
+              "margin": 10,
+            },
+          ]
+        }
+      >
+        Yes
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "borderColor": "#484",
+            "borderRadius": 20,
+            "borderWidth": 2,
+            "opacity": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#0000",
+              "borderRadius": 10,
+              "margin": 2,
+              "padding": 10,
+            }
+          }
+        />
+      </View>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#484",
+              "margin": 10,
+            },
+          ]
+        }
+      >
+        No
+      </Text>
+    </View>
+  </View>
+</View>
+`;

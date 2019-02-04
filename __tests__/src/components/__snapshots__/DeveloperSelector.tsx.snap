@@ -1,0 +1,318 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View>
+  <View
+    style={
+      Array [
+        Object {
+          "alignSelf": "stretch",
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      accessible={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      pointerEvents="box-only"
+      testID="ios_touchable_wrapper"
+    >
+      <TextInput
+        allowFontScaling={true}
+        editable={false}
+        style={
+          Array [
+            Object {
+              "paddingRight": 30,
+            },
+            Object {
+              "backgroundColor": "white",
+              "borderColor": "gray",
+              "borderRadius": 4,
+              "borderWidth": 1,
+              "color": "black",
+              "fontSize": 16,
+              "paddingBottom": 12,
+              "paddingHorizontal": 10,
+              "paddingTop": 13,
+            },
+            Object {},
+          ]
+        }
+        underlineColorAndroid="transparent"
+        value="Cheap Developer"
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "borderLeftColor": "transparent",
+              "borderLeftWidth": 10,
+              "borderRightColor": "transparent",
+              "borderRightWidth": 10,
+              "borderTopColor": "gray",
+              "borderTopWidth": 10,
+              "height": 0,
+              "position": "absolute",
+              "right": 10,
+              "top": 20,
+              "width": 0,
+            },
+            undefined,
+          ]
+        }
+        testID="icon_ios"
+      />
+    </View>
+    <Modal
+      hardwareAccelerated={false}
+      supportedOrientations={
+        Array [
+          "portrait",
+          "landscape",
+        ]
+      }
+      testID="RNPickerSelectModal"
+      transparent={true}
+      visible={false}
+    >
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "flex": 1,
+            "opacity": 1,
+          }
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#EFF1F2",
+              "borderTopColor": "#919498",
+              "borderTopWidth": 0.5,
+              "flexDirection": "row",
+              "height": 44,
+              "justifyContent": "space-between",
+              "zIndex": 2,
+            },
+            undefined,
+          ]
+        }
+        testID="done_bar"
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "flex": 1,
+                "flexDirection": "row",
+                "marginLeft": 15,
+              },
+              undefined,
+            ]
+          }
+        >
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderRightColor": "#D0D4DB",
+                    "borderRightWidth": 1.5,
+                    "borderTopColor": "#D0D4DB",
+                    "borderTopWidth": 1.5,
+                    "height": 15,
+                    "width": 15,
+                  },
+                  undefined,
+                  Object {
+                    "transform": Array [
+                      Object {
+                        "translateY": 17,
+                      },
+                      Object {
+                        "rotate": "-45deg",
+                      },
+                    ],
+                  },
+                  undefined,
+                  Object {},
+                ]
+              }
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "marginHorizontal": 10,
+              }
+            }
+          />
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderRightColor": "#D0D4DB",
+                    "borderRightWidth": 1.5,
+                    "borderTopColor": "#D0D4DB",
+                    "borderTopWidth": 1.5,
+                    "height": 15,
+                    "width": 15,
+                  },
+                  undefined,
+                  Object {
+                    "transform": Array [
+                      Object {
+                        "translateY": 8,
+                      },
+                      Object {
+                        "rotate": "135deg",
+                      },
+                    ],
+                  },
+                  undefined,
+                  Object {},
+                ]
+              }
+            />
+          </View>
+        </View>
+        <View
+          accessible={true}
+          hitSlop={
+            Object {
+              "bottom": 2,
+              "left": 2,
+              "right": 2,
+              "top": 2,
+            }
+          }
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          testID="done_button"
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#007AFE",
+                  "fontSize": 18,
+                  "fontWeight": "bold",
+                  "padding": 10,
+                },
+                undefined,
+              ]
+            }
+          >
+            Done
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#D0D4DB",
+              "height": 215,
+              "justifyContent": "center",
+            },
+            undefined,
+          ]
+        }
+      >
+        <View>
+          <RCTPicker
+            items={
+              Array [
+                Object {
+                  "label": "Select developer",
+                  "textColor": 4288585892,
+                  "value": null,
+                },
+                Object {
+                  "label": "Developer 1",
+                  "textColor": undefined,
+                  "value": 1,
+                },
+                Object {
+                  "label": "Cheap Developer",
+                  "textColor": undefined,
+                  "value": 2,
+                },
+                Object {
+                  "label": "Expensive Developer",
+                  "textColor": undefined,
+                  "value": 3,
+                },
+              ]
+            }
+            onChange={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            selectedIndex={2}
+            style={
+              Array [
+                Object {
+                  "height": 216,
+                },
+                undefined,
+              ]
+            }
+          />
+        </View>
+      </View>
+    </Modal>
+  </View>
+</View>
+`;

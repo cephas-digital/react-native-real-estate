@@ -54,7 +54,8 @@ export const filterEstatesBy = (
 
         return estate;
       }
-    );
+    )
+    .filter((estate: Estate): boolean => !estate.hidden);
 
   return estates;
 };

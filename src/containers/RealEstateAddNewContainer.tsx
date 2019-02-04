@@ -3,11 +3,12 @@ import { SafeAreaView, StatusBar, Text, View } from "react-native";
 import { NavigationScreenProp, NavigationParams } from "react-navigation";
 import { Button, Input } from "react-native-elements";
 import CountrySelector from "../components/CountrySelector";
-import { City, ListingFilters, Developer } from "../interfaces";
+import { City, ListingFilters, Developer, NewEstate } from "../interfaces";
 import DeveloperSelector from "../components/DeveloperSelector";
 import PriceSelector from "../components/PriceSelector";
 import { EstatesContext } from "../context/EstatesContext";
 import { showMessage } from "react-native-flash-message";
+import { validateNewEstate } from "../service/Validators";
 var RealEstateApi = require("./../service/realestate");
 
 interface MyProps {
@@ -15,12 +16,7 @@ interface MyProps {
 }
 
 interface MyState {
-  newEstate: {
-    name: string | null;
-    price: number | null | undefined;
-    city_id: number | null;
-    developer_id: number | null | undefined;
-  };
+  newEstate: NewEstate;
   cities: Array<City>;
   countries: Array<{
     name: string;
@@ -59,63 +55,6 @@ export default class RealEstateAddNewContainer extends React.Component<
       errors: [],
       filters: {}
     };
-  }
-
-  // TODO: Mov it to service
-  validateNewEstate() {
-    let hasErrors = false;
-    const errors: Array<Element> = [];
-    const errorMessages = [];
-
-    const { city_id, developer_id, price, name } = this.state.newEstate;
-    if (city_id === null || !Number.isInteger(city_id)) {
-      hasErrors = true;
-      errorMessages.push("Selected country is invalid!");
-    }
-
-    if (
-      developer_id === null ||
-      typeof developer_id === "undefined" ||
-      !Number.isInteger(developer_id)
-    ) {
-      hasErrors = true;
-      errorMessages.push("Selected developer is invalid!");
-    }
-
-    if (
-      price === null ||
-      typeof price === "undefined" ||
-      !Number.isInteger(price)
-    ) {
-      hasErrors = true;
-      errorMessages.push("Provided price is invalid!");
-    }
-
-    if (name === null || name.length < 1) {
-      hasErrors = true;
-      errorMessages.push("Provided name is invalid!");
-    }
-
-    errorMessages.forEach((errorMessage, index) => {
-      errors.push(
-        <View
-          key={index}
-          style={{
-            backgroundColor: "#ff5722",
-            marginVertical: 4,
-            borderRadius: 4,
-            borderWidth: 1,
-            borderColor: "#ff5722"
-          }}
-        >
-          <Text style={{ color: "#fff", padding: 4 }}>{errorMessage}</Text>
-        </View>
-      );
-    });
-
-    this.setState({ errors: <Fragment>{errors}</Fragment> });
-
-    return hasErrors;
   }
 
   componentDidMount = () => {
@@ -236,7 +175,11 @@ export default class RealEstateAddNewContainer extends React.Component<
               <Button
                 containerStyle={{ width: "35%", marginHorizontal: 10 }}
                 onPress={() => {
-                  if (this.validateNewEstate()) {
+                  const validationResult = validateNewEstate(
+                    this.state.newEstate
+                  );
+                  this.setState({ errors: validationResult.errors });
+                  if (validationResult.hasErrors) {
                     return;
                   }
 

@@ -50,10 +50,41 @@ let data: Array<Estate> = [
       created_at: "2019-01-31 13:28:45",
       updated_at: "2019-01-31 13:28:45"
     }
+  },
+  {
+    id: 360000,
+    name: "Some apartment",
+    isOnSale: 1,
+    hidden: true,
+    price: 4000,
+    city_id: 61,
+    developer_id: 61,
+    created_at: "2019-02-01 20:38:05",
+    updated_at: "2019-02-01 20:38:05",
+    city: {
+      id: 61,
+      name: "Mary Field",
+      country: "Monaco",
+      created_at: "2019-01-31 13:28:45",
+      updated_at: "2019-01-31 13:28:45"
+    },
+    developer: {
+      id: 61,
+      name: "Lucious Sipes",
+      created_at: "2019-01-31 13:28:45",
+      updated_at: "2019-01-31 13:28:45"
+    }
   }
 ];
 
 test("renders correctly", () => {
-  const tree = renderer.create(<RealEstateList estates={data} />).toJSON();
+  const tree = renderer
+    .create(
+      <RealEstateList
+        onSingleItemPress={item => console.log(item)}
+        estates={data}
+      />
+    )
+    .toJSON();
   expect(tree).toMatchSnapshot();
 });

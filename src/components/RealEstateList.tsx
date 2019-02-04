@@ -49,7 +49,7 @@ export default class RealEstateList extends Component<MyProps> {
                     <Badge
                       value={`$${item.price}`}
                       status={"success"}
-                      badgeStyle={{ padding: 5 }}
+                      badgeStyle={{ padding: 2 }}
                     />
                   </View>
                 }

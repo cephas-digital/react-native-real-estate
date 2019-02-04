@@ -27,6 +27,19 @@ export default class CountrySelector extends PureComponent<MyProps> {
             this.props.setFilters({ country: selectedCountry });
           }}
           value={this.props.filters.country}
+          style={{
+            inputIOS: {
+              fontSize: 16,
+              paddingTop: 13,
+              paddingHorizontal: 10,
+              paddingBottom: 12,
+              borderWidth: 1,
+              borderColor: "gray",
+              borderRadius: 4,
+              backgroundColor: "white",
+              color: "black"
+            }
+          }}
         />
       </View>
     );
